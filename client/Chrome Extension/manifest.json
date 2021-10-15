@@ -1,0 +1,26 @@
+{
+    "name": "Hate Speech Scanner", 
+    "description": "Extension detecting hate speech",
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "background" : {
+        "scripts": ["./background.js"]
+    },
+    "options_page" : "./options.html",
+    "browser_action" : {
+        "default_popup" : "popup.html"
+    },
+    "permissions" : [
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "contextMenus", 
+          "idle", 
+          "webRequest", 
+          "webRequestBlocking",
+           "webNavigation", "alarms", 
+           "storage", 
+           "notifications"
+
+    ]
+}
