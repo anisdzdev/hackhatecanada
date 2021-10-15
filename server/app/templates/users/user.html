@@ -1,0 +1,17 @@
+{% include "header.html" %}
+{% block body %}
+    <div class="content">
+        <div class="container">
+            <!-- CONTAINER -->
+            This is the user
+            id: {{ user.id }}
+            username: {{ user.username }}
+            first address: {{ user.addresses[0].address }}
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}
+    <script>
+    </script>
+{% endblock %}
+{% include "footer.html" %}
