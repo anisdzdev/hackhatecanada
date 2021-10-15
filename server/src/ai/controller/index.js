@@ -50,13 +50,13 @@ module.exports.report = async (req, res) => {
     let times = link.times_reported + 1
     if(req.body.words)
       req.body.words.map(word => {
-        if(link.times_reported.indexOf(word) === -1){
-          link.times_reported.push(word)
+        if(link.hate_words.indexOf(word) === -1){
+          link.hate_words.push(word)
           if(times > config.minTimesReportedToConsiderTrue)
             dataset.push(word)
         }
       })
-    link = await schemes.Link.findOneAndUpdate({url: req.body.url}, {times_reported: times}, {new: true})
+    link = await schemes.Link.findOneAndUpdate({url: req.body.url}, {times_reported: times, hate_words: link.hate_words}, {new: true})
     return res.status(200).send({message: `Reported website for the ${times}th time`, link})
   } else {
     link = schemes.Link({
