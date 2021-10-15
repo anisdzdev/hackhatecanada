@@ -12,6 +12,7 @@
     //if(live_url.includes(".ca"))
   // chrome.tabs.executeScript(null, {file: "./foreground.js"}, ()=> console.log("injected"))
 });*/
+
 let active_tab_id = 0; 
 
 chrome.tabs.onUpdated.addListener(function (tabId, info) {
@@ -20,8 +21,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, info) {
     chrome.tabs.get(tabId, (current_tab_info) => {
       live_url = current_tab_info.url;
       if (live_url.includes(".ca/"))
-
-        chrome.tabs.insertCss(null, {file:'./style/style.css'});
+        chrome.tabs.insertCSS(null, {file:'./style/style.css'});
         chrome.tabs.executeScript(null, { file: "./foreground.js" }, () =>
           console.log("injected")
         );
