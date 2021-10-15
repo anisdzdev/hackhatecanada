@@ -5,13 +5,13 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://00000000.ca/robots.txt",
         "mime-detected": "text/html",
         "status": "404",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/",
@@ -19,7 +19,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/business-email",
@@ -27,7 +27,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/cloudhosting.php",
@@ -35,7 +35,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/codeguard.php",
