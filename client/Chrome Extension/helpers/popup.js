@@ -6,10 +6,8 @@ const show_popup = function (body) {
             <div class="hcc-md-content">
                 <h3>Are you sure you want to proceed?</h3>
                 <div>
-                    
-                        <p><strong>Hate Speech Scanner</strong> has flagged this website as potentially containing hate speech.
+                      <p><strong>Hate Speech Scanner</strong> has flagged this website as potentially containing hate speech.
                          You may click off the website or continue by clicking on the button below.</p>
-                    
                     <button class="hcc-md-close" id="hcc-close-btn">Proceed anyway</button>
                 </div>
             </div>
