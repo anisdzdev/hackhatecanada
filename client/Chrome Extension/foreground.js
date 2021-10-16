@@ -8,6 +8,11 @@ document.getElementById('hcc-close-btn').addEventListener('click', () => {
 })
 
 
+// toggleButton.addEventListener('click', () => {
+//   toggle();
+// });
+
+// *********
 
 //foreground.js is where u add css classes and shit
 
