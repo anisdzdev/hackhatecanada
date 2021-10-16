@@ -2,7 +2,6 @@ const helper = require('../utils/helper')
 const schemes = require('../models/mongoose');
 const { performance } = require('perf_hooks');
 const config = require('../../../config');
-const bulkTransactionsManager = require('../../../services/bulkTransactionsManager');
 
 const dataset = ["Jews"]
 
@@ -58,6 +57,15 @@ module.exports.analyse = async (req, res) => {
     const endTime = performance.now()
     res.status(201).json({ time_taken: endTime - startTime, is_harmful: true, url: req.body.url });
   } else {
+    link = schemes.Link({
+      url: req.body.url,
+      is_harmful: false,
+      hate_words: [],
+      last_updated: new Date(),
+      is_reported: false,
+      times_reported: 0
+    });
+    link.save();
     const endTime = performance.now()
     res.status(200).json({ time_taken: endTime - startTime, is_harmful: false, url: req.body.url });
   }
@@ -70,7 +78,9 @@ module.exports.report = async (req, res) => {
       return res.status(200).send({ message: 'Page was already in database', link })
     }
     let times = link.times_reported + 1
-    if (req.body.words)
+    if(times > config.minTimesReportedToConsiderTrue)
+      link.is_harmful = true
+    if(req.body.words)
       req.body.words.map(word => {
         if (link.hate_words.indexOf(word) === -1) {
           link.hate_words.push(word)
@@ -86,7 +96,7 @@ module.exports.report = async (req, res) => {
       is_harmful: true,
       hate_words: req.body.words ? req.body.words : [],
       last_updated: new Date(),
-      is_reported: true,
+      is_reported: false,
       times_reported: 1
     })
     link.save();
