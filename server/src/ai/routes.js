@@ -18,6 +18,10 @@ router.post('/report', validateSchemas.inputs(schemas.valid_link, 'body'),(req, 
   controller.report(req, res);
 });
 
+router.post('/add_expression',(req, res) => {
+  controller.add_expression(req, res);
+});
+
 router.delete('/', (req, res) => {
   //Resets the database
   controller.reset(res);
