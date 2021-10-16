@@ -3,7 +3,31 @@ const schemes = require('../models/mongoose');
 const { performance } = require('perf_hooks');
 const config = require('../../../config');
 
-const dataset = ["Jews"]
+const dataset = readHateSpeechTextFile(path.resolve('hackhatecanada/server', 'hate_speech.txt'));
+
+function readHateSpeechTextFile(file) {
+  const separator = /,/g;
+  var fileContent = fs.readFileSync(file, 'utf-8');
+  var matchIndexes = new Array();
+
+  while ((match = separator.exec(fileContent)) != null) {
+    matchIndexes.push(match.index);
+  }
+
+  var allHateWords = new Array();
+  var lastIndex = 0;
+
+  for (var i = 0; i < matchIndexes.length; i++) {
+    if (i == 0) {
+      allHateWords.push((fileContent.substring(lastIndex, matchIndexes[i])).toLowerCase());
+    }
+    else {
+      allHateWords.push((fileContent.substring(lastIndex + 1, matchIndexes[i])).toLowerCase());
+    }
+    lastIndex = matchIndexes[i];
+  }
+  return allHateWords;
+}
 
 let bulkContainer;
 
