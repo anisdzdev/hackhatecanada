@@ -21,6 +21,11 @@ router.post('/report', validateSchemas.inputs(schemas.valid_link, 'body'),(req, 
 router.delete('/', (req, res) => {
   //Resets the database
   controller.reset(res);
-})
+});
+
+router.get('/stats', (req, res) => {
+  // Fetches stats from database and prepares them for frontend consumption.
+  controller.getStats(res);
+});
 
 module.exports = router;
