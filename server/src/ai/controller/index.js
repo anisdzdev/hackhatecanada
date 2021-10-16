@@ -33,6 +33,7 @@ function readHateSpeechTextFile(file) {
 }
 
 let bulkContainer;
+let bulkUrls = {}
 
 module.exports.check = async (req, res) => {
   let link = await schemes.Link.findOne({ url: req.query.url })
@@ -44,6 +45,9 @@ module.exports.check = async (req, res) => {
 }
 
 module.exports.analyse = async (req, res) => {
+  if(Object.keys(bulkUrls).includes(req.body.url))
+    return res.status(200).send({ message: 'Page was already in database', link })
+
   let link = await schemes.Link.findOne({ url: req.body.url })
   if (link != null)
     return res.status(200).send({ message: 'Page was already in database', link })
@@ -53,11 +57,17 @@ module.exports.analyse = async (req, res) => {
     return res.status(500).send("Could not successfully load this web page")
 
   const startTime = performance.now()
-  if (new RegExp(dataset.join("|")).test(contents)) {
+  let words = []
+  for(let i=0; i<dataset.length; i++){
+    if(contents.toLowerCase().includes(dataset[i].toLowerCase())){
+      words.push(dataset[i])
+    }
+  }
+  if (words.length>3) {
     link = schemes.Link({
       url: req.body.url,
       is_harmful: true,
-      hate_words: [],
+      hate_words: words,
       last_updated: new Date(),
       is_reported: false,
       times_reported: 0
@@ -65,6 +75,7 @@ module.exports.analyse = async (req, res) => {
 
     if (bulkContainer) {
       bulkContainer.insert(link);
+      bulkUrls[req.body.url] = link;
       if (bulkContainer.length >= 50) {
         bulkContainer.execute((error) => {
           if (error) {
@@ -72,6 +83,7 @@ module.exports.analyse = async (req, res) => {
           } else {
             // We reset the bulk container, to create a new one.
             bulkContainer = null;
+            bulkUrls = {}
           }
         });
       }
@@ -79,6 +91,7 @@ module.exports.analyse = async (req, res) => {
       // If we don't have a bulkContainer defined, we create one and add then add the operation to it.
       bulkContainer = schemes.Link.collection.initializeUnorderedBulkOp();
       bulkContainer.insert(link);
+      bulkUrls[req.body.url] = link;
     }
 
     const endTime = performance.now()
@@ -92,7 +105,27 @@ module.exports.analyse = async (req, res) => {
       is_reported: false,
       times_reported: 0
     });
-    link.save();
+
+    if (bulkContainer) {
+      bulkContainer.insert(link);
+      bulkUrls[req.body.url] = link;
+      if (bulkContainer.length >= 50) {
+        bulkContainer.execute((error) => {
+          if (error) {
+            console.log('Error happened while performing the operations to the database.')
+          } else {
+            // We reset the bulk container, to create a new one.
+            bulkContainer = null;
+            bulkUrls = {}
+          }
+        });
+      }
+    } else {
+      // If we don't have a bulkContainer defined, we create one and add then add the operation to it.
+      bulkContainer = schemes.Link.collection.initializeUnorderedBulkOp();
+      bulkContainer.insert(link);
+      bulkUrls[req.body.url] = link;
+    }
     const endTime = performance.now()
     res.status(200).json({ time_taken: endTime - startTime, is_harmful: false, url: req.body.url });
   }
@@ -131,6 +164,10 @@ module.exports.report = async (req, res) => {
   }
 
 };
+
+module.exports.add_expression = async (req, res) => {
+  res.send("Works !")
+}
 
 module.exports.reset = async (res) => {
   await schemes.Link.deleteMany({})
