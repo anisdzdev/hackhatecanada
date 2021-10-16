@@ -6,7 +6,7 @@ const config = require('../../../config');
 const dataset = ["Jews"]
 
 module.exports.check = async (req, res) => {
-  let link = await schemes.Link.findOne({url: req.params.url})
+  let link = await schemes.Link.findOne({url: req.query.url})
   if (link == null){
     //send request to start new crawling job
     return res.status(404).send();

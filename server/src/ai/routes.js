@@ -6,7 +6,7 @@ const schemas = require('./utils/schemaValidation');
 
 const router = express.Router();
 
-router.get('/:url', (req, res) => {
+router.get('/', (req, res) => {
   controller.check(req, res);
 });
 
