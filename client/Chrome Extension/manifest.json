@@ -1,8 +1,9 @@
 {
-    "name": "Hate Speech Scanner", 
+    "name": "Hate Speech Scanner",
     "description": "This extension detects any hateful or harmful text that may be present in a webpage to provide a safer online environment. ",
     "version": "0.1.0",
     "manifest_version": 2,
+    "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'",
     "icons": {
         "16": "style/icons/icon16.png",
         "48": "style/icons/icon48.png",
@@ -19,12 +20,12 @@
         "tabs",
         "http://*/*",
         "https://*/*",
-        "contextMenus", 
-          "idle", 
-          "webRequest", 
+        "contextMenus",
+          "idle",
+          "webRequest",
           "webRequestBlocking",
-           "webNavigation", "alarms", 
-           "storage", 
+           "webNavigation", "alarms",
+           "storage",
            "notifications"
 
     ]
