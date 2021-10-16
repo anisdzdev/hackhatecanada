@@ -36,9 +36,10 @@ module.exports.analyse = async (req, res) => {
     link.save();
     const endTime = performance.now()
     res.status(201).json({ time_taken: endTime - startTime, is_harmful: true, url: req.body.url });
+  } else {
+    const endTime = performance.now()
+    res.status(200).json({ time_taken: endTime - startTime, is_harmful: false, url: req.body.url });
   }
-  const endTime = performance.now()
-  res.status(200).json({ time_taken: endTime - startTime, is_harmful: false, url: req.body.url });
 };
 
 module.exports.report = async (req, res) => {
