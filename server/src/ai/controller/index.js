@@ -9,18 +9,19 @@ const dataset = readHateSpeechTextFile(path.resolve('./', 'hate_speech.txt'));
 
 function readHateSpeechTextFile(file) {
   const separator = /,/g;
-  var fileContent = fs.readFileSync(file, 'utf-8');
-  var matchIndexes = new Array();
+  const fileContent = fs.readFileSync(file, 'utf-8');
+  const matchIndexes = [];
 
+  let match;
   while ((match = separator.exec(fileContent)) != null) {
     matchIndexes.push(match.index);
   }
 
-  var allHateWords = new Array();
-  var lastIndex = 0;
+  const allHateWords = [];
+  let lastIndex = 0;
 
-  for (var i = 0; i < matchIndexes.length; i++) {
-    if (i == 0) {
+  for (let i = 0; i < matchIndexes.length; i++) {
+    if (i === 0) {
       allHateWords.push((fileContent.substring(lastIndex, matchIndexes[i])).toLowerCase());
     }
     else {
@@ -65,7 +66,7 @@ module.exports.analyse = async (req, res) => {
     if (bulkContainer) {
       bulkContainer.insert(link);
       if (bulkContainer.length >= 50) {
-        bulkContainer.execute((error, result) => {
+        bulkContainer.execute((error) => {
           if (error) {
             console.log('Error happened while performing the operations to the database.')
           } else {
