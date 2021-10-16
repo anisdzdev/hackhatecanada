@@ -2,8 +2,10 @@ const helper = require('../utils/helper')
 const schemes = require('../models/mongoose');
 const { performance } = require('perf_hooks');
 const config = require('../../../config');
+const path = require('path')
+const fs = require('fs')
 
-const dataset = readHateSpeechTextFile(path.resolve('hackhatecanada/server', 'hate_speech.txt'));
+const dataset = readHateSpeechTextFile(path.resolve('./', 'hate_speech.txt'));
 
 function readHateSpeechTextFile(file) {
   const separator = /,/g;
