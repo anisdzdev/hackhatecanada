@@ -43,7 +43,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/combo-offers",
@@ -51,7 +51,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/content.php?action=demo&type=diy",
@@ -59,7 +59,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/dedicated-servers-windows.php",
@@ -67,7 +67,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/dedicated-servers.php",
@@ -75,7 +75,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/digital-certificate",
@@ -83,7 +83,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/domain-registration/domain-name-suggestion-tool.php",
@@ -91,7 +91,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/domain-registration/domain-registration-price.php",
@@ -99,7 +99,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/domain-registration/domain-whois-lookup.php",
@@ -107,7 +107,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/domain-registration/free-with-domain-registration.php",
@@ -115,7 +115,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/domain-registration/idn",
@@ -123,7 +123,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/domain-registration/index.php",
@@ -131,7 +131,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/domain-registration/premium-domain.php",
@@ -139,7 +139,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/domain-registration/promos.php",
@@ -147,7 +147,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/domain-registration/transfer/index.php",
@@ -155,7 +155,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/domain.php?action=ask_travel_uin",
@@ -163,7 +163,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/index.php",

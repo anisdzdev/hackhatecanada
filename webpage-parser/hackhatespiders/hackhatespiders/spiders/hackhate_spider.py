@@ -1,29 +1,17 @@
-import scrapy
-import json
+from scrapy.spiders import CrawlSpider, Rule
+from scrapy.linkextractors import LinkExtractor
 
-class HackHateSpider(scrapy.Spider):
-    name = "hackhate"
-    num_urls = 10
-    
-    def __init__(self, num_urls=10):
-        self.num_urls = num_urls
+class MySpider(CrawlSpider):
+    name = 'hackhate'
+    start_urls = ['https://barenakedislam.com/']
 
-    def start_requests(self):
-        with open('test.json', 'r+', encoding='utf8') as f:
-            data = json.load(f)
-            counter = 0
-            for index, row in enumerate(data):
-                if row['isUsed'] == False:
-                    returnedUrl = row['url']
-                    data[index]['isUsed'] = True
-                    ++counter
-                    
-                    if counter == self.num_urls:
-                        f.seek(0)
-                        json.dump(data, f, indent=4)
-                        f.truncate()
-                        break
-                    yield scrapy.Request(returnedUrl, callback=self.parse)
+    rules = (
+        Rule(LinkExtractor(), callback='parse_item', follow=True),
+    )
 
-    def parse(self, response):
-        print(response)
+    def parse_item(self, response):
+        # For every page, grab its url.
+        item = dict()
+        item['url'] = response.url
+
+        return item
