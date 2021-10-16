@@ -173,3 +173,19 @@ module.exports.reset = async (res) => {
   await schemes.Link.deleteMany({})
   res.send("Cleared Database !")
 };
+
+module.exports.getStats = (res) => {
+  // Since these functions don't return promises, we have to use callbacks.
+  schemes.Link.countDocuments({}, (errorTotal, totalCrawledWebsites) => {
+    schemes.Link.countDocuments({ is_harmful: true }, (errorHarmful, totalHarmfulWebsites) => {
+      if (errorTotal || errorHarmful) {
+        res.status(500).send('There was an error while fetching the stats.');
+      } else {
+        res.status(201).json({
+          totalCrawledWebsites,
+          totalHarmfulWebsites
+        });
+      }
+    });
+  });
+}
