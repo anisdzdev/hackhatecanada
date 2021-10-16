@@ -2,6 +2,7 @@ const helper = require('../utils/helper')
 const schemes = require('../models/mongoose');
 const {performance} = require('perf_hooks');
 const config = require('../../../config');
+const { Model } = require('mongoose');
 
 const dataset = ["Jews"]
 
@@ -32,7 +33,8 @@ module.exports.analyse = async (req, res) => {
       last_updated: new Date(),
       is_reported: false,
       times_reported: 0
-    })
+    });
+
     link.save();
     const endTime = performance.now()
     res.status(201).json({ time_taken: endTime - startTime, is_harmful: true, url: req.body.url });

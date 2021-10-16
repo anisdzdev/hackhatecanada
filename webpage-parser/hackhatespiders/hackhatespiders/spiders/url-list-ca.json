@@ -170,7 +170,7 @@
         "mime-detected": "text/html",
         "status": "301",
         "redirect": "https://001.ca/",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/login.php",
@@ -178,7 +178,7 @@
         "status": "200",
         "languages": "eng",
         "encoding": "UTF-8",
-        "isUsed": false
+        "isUsed": true
     },
     {
         "url": "https://001.ca/login.php?action=showforgotpass",
