@@ -16,20 +16,32 @@
       rel="stylesheet"
     />
   </head>
+  
   <body>
     <div class="card" style="width: 18rem">
       <div class="card-body">
-        <h5 class="card-title">Hate Speech Scanner</h5>
-        <p class="card-text">
-          This extension flags websites that potentially contain hate speech to
-          promote a safer online environment.
+        <h5 class="card-title orange">Hate Speech Scanner</h5>
+        <p class="card-text" style="text-align:justify">
+          <b>Hi !</b>
+          We detect websites that potentially contain harmful and offensive content. Join us to promote
+          a safer and cleaner online environment !
         </p>
-        <a
-          onclick="return closeWindow();"
-          id="disableButton"
-          class="btn btn-primary"
-          >Close</a
-        >
+        <h6 class="orange" style="font-weight: bold;">What word/expression would you consider offensive?</h6>
+        <form>
+          <label for="inp" class="inp">
+            <input type="text" id="inp" placeholder="&nbsp;">
+            <span class="label">Type here</span>
+            <span class="focus-bg"></span>
+          </label>
+         <button class="btn" type="submit">
+           Send
+         </button>
+        </form>
+        <br>
+        <p class="card-text" style="text-align:justify">
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="orange" style="text-decoration: none;" target="_blank">
+            Learn more</a>  about the definition of hate speech and its impact on our society. Might be an interesting read !. 
+        </p>
 
         <br id="br1" style="display: none" />
         <br id="br2" style="display: none" />
@@ -37,17 +49,9 @@
     </div>
     <script type="text/javascript">
       function closeWindow() {
-        // Open the new window
-        // with the URL replacing the
-        // current page using the
-        // _self value
-        let new_window = open(location, '_self');
-
-        // Close this window
-        new_window.close();
-
-        return false;
+        window.close();
       }
+
     </script>
   </body>
 </html>
