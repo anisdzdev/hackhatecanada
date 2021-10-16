@@ -14,56 +14,54 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
       rel="stylesheet"
     />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+    />
   </head>
 
   <body>
     <div class="hcc-card" style="width: 18rem">
       <div class="card-body">
         <h5 class="card-title orange">Hate Speech Scanner</h5>
-        <p class="card-text" style="text-align:justify; color: #c8c8c8">
-          Hey there!
-          We detect websites that potentially contain harmful and offensive content. Join us to promote
-          a safer and cleaner online environment !
+        <p class="card-text" style="text-align: justify; color: #c8c8c8">
+          Hey there! We detect websites that potentially contain harmful and
+          offensive content. Join us to promote a safer and cleaner online
+          environment !
         </p>
-        <h6 class="orange" style="font-weight: bold;">What word/expression would you consider offensive?</h6>
-        <button class="hcc-btn" id="hcc-report-btn" onclick="document.getElementById('hcc-report-btn').classList.add('hcc-hidden');
-        document.getElementById('hcc-form').classList.remove('hcc-hidden')">
+        <h6 class="orange" style="font-weight: bold">
+          What word/expression would you consider offensive?
+        </h6>
+        <button type="button" class="hcc-btn" id="hcc-report-btn">
           Report
         </button>
         <form class="hcc-hidden" id="hcc-form">
           <label for="inp" class="inp">
-            <input type="text" id="inp" placeholder="&nbsp;">
+            <input
+              class="hcc-form-input"
+              type="text"
+              id="inp"
+              placeholder="&nbsp;"
+            />
             <span class="label">Type here</span>
             <span class="focus-bg"></span>
           </label>
-         <button class="hcc-btn" type="submit">
-           Send
-         </button>
+          <button class="hcc-btn" type="submit">Send</button>
         </form>
-        <br>
-        <p class="hcc-card-bottom-text" style="text-align:justify">
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="white" style="text-decoration: none;" target="_blank">
-            Learn more</a>  about the definition of hate speech and its impact on our society.
+        <br />
+        <p class="hcc-card-bottom-text" style="text-align: justify">
+          <a
+            href="https://www.cfr.org/backgrounder/hate-speech-social-media-global-comparisons"
+            class="white"
+            style="text-decoration: none"
+            target="_blank"
+          >
+            Learn more</a
+          >
+          about the definition of hate speech and its impact on our society.
         </p>
-
-        <br id="br1" style="display: none" />
-        <br id="br2" style="display: none" />
       </div>
     </div>
-    <script type="text/javascript">
-      function closeWindow() {
-        window.close();
-      }
-      function showForm() {
-        console.log("hi")
-        document.getElementById('hcc-report-btn').classList.add('hcc-hidden')
-        document.getElementById('hcc-form').classList.remove('hcc-hidden')
-      }
-      document.getElementById("hcc-report-btn").addEventListener("click", ()=> {
-        document.getElementById('hcc-report-btn').classList.add('hcc-hidden')
-        document.getElementById('hcc-form').classList.remove('hcc-hidden')
-      });
-    </script>
+    <script src="popupJS.js"></script>
   </body>
 </html>
