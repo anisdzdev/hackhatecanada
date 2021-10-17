@@ -29,13 +29,13 @@
           offensive content. Join us to promote a safer and cleaner online
           environment !
         </p>
-        <h6 class="orange" style="font-weight: bold">
-          What word/expression would you consider offensive?
+        <h6 class="orange" style="font-weight: bold" id="hcc-message">
+          What did you consider offensive on this page?
         </h6>
         <button type="button" class="hcc-btn" id="hcc-report-btn">
           Report
         </button>
-        <form class="hcc-hidden" id="hcc-form">
+        <form method="POST" class="hcc-hidden" id="hcc-form">
           <label for="inp" class="inp">
             <input
               class="hcc-form-input"
@@ -43,11 +43,20 @@
               id="inp"
               placeholder="&nbsp;"
             />
-            <span class="label">Type here</span>
+            <span style="color: #c8c8c8" class="label">Type here</span>
             <span class="focus-bg"></span>
           </label>
-          <button class="hcc-btn" type="submit">Send</button>
+          <button class="hcc-btn" type="button" id="hcc-send-btn">Send</button>
         </form>
+        <h6 class="green hcc-hidden" id="hcc-success">
+          Thank you for your collaboration.
+        </h6>
+        <h6 class="red hcc-hidden" id="hcc-error">
+          Something went wrong.
+        </h6>
+        <h6 class="red hcc-hidden" id="hcc-provide-good">
+          Please enter at least two words that are in the webpage.
+        </h6>
         <br />
         <p class="hcc-card-bottom-text" style="text-align: justify">
           <a
