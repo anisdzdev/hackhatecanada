@@ -169,14 +169,6 @@
   color: #fff;
 }
 
-.hcc-form-input-wrong {
-  border: 1px solid red;
-}
-
-.hcc-wrong-input-message {
-  color: red;
-}
-
 .hcc-hidden {
   display: none;
 }

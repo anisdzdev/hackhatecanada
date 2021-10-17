@@ -40,6 +40,7 @@ function postExpression() {
               document.getElementById('hcc-form').classList.add('hcc-hidden');
               const button = document.getElementById('hcc-report-btn');
               const message = document.getElementById('hcc-message');
+              message.style.color = 'lime';
               button.innerHTML = 'Report Another';
               message.innerHTML =
                 'Your request has been submitted. Thank you for making the internet a safer place!';
@@ -50,8 +51,7 @@ function postExpression() {
                 .getElementById('inp')
                 .classList.add('hcc-form-input-wrong');
               const message = document.getElementById('hcc-message');
-              message.classList.remove('orange');
-              message.classList.add('hcc-wrong-input-message');
+              message.style.color = 'red';
               message.innerHTML =
                 'We could not find this expression on the page. Please try again.';
 
@@ -68,3 +68,4 @@ function postExpression() {
 
 document.getElementById('hcc-report-btn').onclick = showForm;
 document.getElementById('hcc-send-btn').onclick = postExpression;
+document.getElementById('hcc-form').classList.add('hcc-hidden');
