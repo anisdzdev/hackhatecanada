@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 // reactstrap components
 import {
@@ -28,6 +29,15 @@ function LandingPage() {
   const [pills, setPills] = React.useState("1");
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
+  const [expression, setExpression] = React.useState("");
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    addHateExpression(expression);
+    // const formData = new FormData();
+    // formData.append("expression", expression);
+  }
+
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
@@ -72,12 +82,13 @@ function LandingPage() {
                 </h4>
               </Col>
             </Row>
-              <Form onSubmit={addHateExpression.bind(this)}>
+              <Form>
             <Row style={{justifyContent: "center"}}>
                 <Input
                   placeholder="Type your hate speech here..."
                   type="text"
                   style={{backgroundColor: "white", padding: "15px", fontSize: "1.25em", width: "50%"}}
+                  onChange={(e) => setExpression(e.target.value)}
                   onFocus={() => setFirstFocus(true)}
                   onBlur={() => setFirstFocus(false)}
                 ></Input>
@@ -87,11 +98,10 @@ function LandingPage() {
                   block
                   className="btn-round"
                   style={{ width: "20%", margin: '30px 1px'}}
+                  onClick={(e) => {onSubmit(e);}}
                   color="info"
-                  href="#send"
-                  onClick={(e) => e.preventDefault()}
-                  size="lg"
-                >
+                  type="submit"
+                  size="lg">
                   Send
                 </Button>
               </Row>
@@ -171,26 +181,25 @@ function LandingPage() {
   );
 }
 
-function addHateExpression(e) {
-  e.preventDefault();
-  
-  fetch('http://localhost:5000/ai/add_expression', {
-    method: "POST",
-    body: JSON.stringify(this.state),
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-  }).then(
-    (response) => (response.json())
-  ).then((response) => {
-    if (response.status === 'success') {
-      console.log(response + "was sent!")
-      this.resetForm()
-    } else if (response.status === 'fail') {
-      console.log("Message failed to send.")
-    }
-  })
+function addHateExpression(expression) {
+  return axios.post("http://localhost:5000/ai/add_expression", expression);
+  // fetch('http://localhost:5000/ai/add_expression', {
+  //   method: "POST",
+  //   body: JSON.stringify(this.state.formData),
+  //   headers: {
+  //     'Accept': 'application/json',
+  //     'Content-Type': 'application/json'
+  //   },
+  // }).then(
+  //   (response) => (response.json())
+  // ).then((response) => {
+  //   if (response.status === 'success') {
+  //     console.log(response + "was sent!")
+  //     this.resetForm()
+  //   } else if (response.status === 'fail') {
+  //     console.log("Message failed to send.")
+  //   }
+  // })
 }
 
 export default LandingPage;
