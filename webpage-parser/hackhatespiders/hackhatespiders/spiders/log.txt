@@ -1,0 +1,575 @@
+2021-10-16 11:41:23 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: hackhatespiders)
+2021-10-16 11:41:23 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 35.0.0, Platform Windows-10-10.0.19043-SP0
+2021-10-16 11:41:23 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2021-10-16 11:41:23 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'hackhatespiders',
+ 'LOG_FILE': 'log.txt',
+ 'NEWSPIDER_MODULE': 'hackhatespiders.spiders',
+ 'SPIDER_MODULES': ['hackhatespiders.spiders']}
+2021-10-16 11:41:23 [scrapy.extensions.telnet] INFO: Telnet Password: d866538c4c949a0a
+2021-10-16 11:41:23 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-10-16 11:41:24 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-10-16 11:41:24 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-10-16 11:41:24 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2021-10-16 11:41:24 [scrapy.core.engine] INFO: Spider opened
+2021-10-16 11:41:24 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-10-16 11:41:24 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/> (referer: None)
+2021-10-16 11:41:24 [py.warnings] WARNING: D:\Projects\hackhatecanada\webpage-parser\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py:287: RuntimeWarning: Could not load referrer policy 'no-referrer, strict-origin-when-cross-origin'
+  warnings.warn(msg, RuntimeWarning)
+
+2021-10-16 11:41:24 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://barenakedislam.com/#genesis-content> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/#genesis-nav-primary> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/13/is-this-the-apartheid-israel-that-congressmuslims-ilhan-omar-and-rashida-tlaib-keep-whining-about/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/category/children/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/13/has-the-united-states-turned-into-china/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/category/muslims-vs-muslims/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/category/uncategorized/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/13/sorry-joe-no-way-no-how-will-israel-allow-you-to-open-a-second-u-s-consulate-in-jerusalem-just-for-palestinians/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/category/illegitimate-president/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (403) <GET http://blog.feedspot.com/islam_blog/> (referer: None)
+2021-10-16 11:41:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/>
+{'url': 'https://barenakedislam.com/'}
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/13/now-this-is-really-scary-if-indeed-it-is-true/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/category/islamomania/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/category/never-hire-a-muslim/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/14/finally-its-about-time-european-countries-started-pushing-back-illegal-alien-muslim-invaders-into-muslim-countries/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/14/norway-man-who-killed-five-and-wounded-two-with-bow-arrows-is-a-convert-to-islam/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/14/send-this-muslim-bitch-back-to-the-islamic-hellhole-she-crawled-out-of/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/>
+{'url': 'https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/'}
+2021-10-16 11:41:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/13/is-this-the-apartheid-israel-that-congressmuslims-ilhan-omar-and-rashida-tlaib-keep-whining-about/>
+{'url': 'https://barenakedislam.com/2021/10/13/is-this-the-apartheid-israel-that-congressmuslims-ilhan-omar-and-rashida-tlaib-keep-whining-about/'}
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/comments/feed/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://barenakedislam.com/wp-login.php> (failed 1 times): 503 Service Unavailable
+2021-10-16 11:41:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://wildbillforamerica.com/> from <GET http://www.wildbillforamerica.com>
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://wordpress.org/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://barenakedislam.com/wp-login.php?action=register> (failed 1 times): 503 Service Unavailable
+2021-10-16 11:41:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/category/children/>
+{'url': 'https://barenakedislam.com/category/children/'}
+2021-10-16 11:41:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/13/has-the-united-states-turned-into-china/>
+{'url': 'https://barenakedislam.com/2021/10/13/has-the-united-states-turned-into-china/'}
+2021-10-16 11:41:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/category/muslims-vs-muslims/>
+{'url': 'https://barenakedislam.com/category/muslims-vs-muslims/'}
+2021-10-16 11:41:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/category/uncategorized/>
+{'url': 'https://barenakedislam.com/category/uncategorized/'}
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.studiopress.com/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.studiopress.com/themes/> from <GET https://my.studiopress.com/themes/metro/>
+2021-10-16 11:41:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://vladtepesblog.com/> from <GET http://vladtepesblog.com/>
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/feed/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/13/sorry-joe-no-way-no-how-will-israel-allow-you-to-open-a-second-u-s-consulate-in-jerusalem-just-for-palestinians/>
+{'url': 'https://barenakedislam.com/2021/10/13/sorry-joe-no-way-no-how-will-israel-allow-you-to-open-a-second-u-s-consulate-in-jerusalem-just-for-palestinians/'}
+2021-10-16 11:41:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/category/illegitimate-president/>
+{'url': 'https://barenakedislam.com/category/illegitimate-president/'}
+2021-10-16 11:41:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/13/now-this-is-really-scary-if-indeed-it-is-true/>
+{'url': 'https://barenakedislam.com/2021/10/13/now-this-is-really-scary-if-indeed-it-is-true/'}
+2021-10-16 11:41:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/#comment-940009> (referer: https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/)
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/> (referer: https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/)
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/?replytocom=939900#respond> (referer: https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/)
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/category/islamomania/>
+{'url': 'https://barenakedislam.com/category/islamomania/'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/category/never-hire-a-muslim/>
+{'url': 'https://barenakedislam.com/category/never-hire-a-muslim/'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/14/finally-its-about-time-european-countries-started-pushing-back-illegal-alien-muslim-invaders-into-muslim-countries/>
+{'url': 'https://barenakedislam.com/2021/10/14/finally-its-about-time-european-countries-started-pushing-back-illegal-alien-muslim-invaders-into-muslim-countries/'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/14/norway-man-who-killed-five-and-wounded-two-with-bow-arrows-is-a-convert-to-islam/>
+{'url': 'https://barenakedislam.com/2021/10/14/norway-man-who-killed-five-and-wounded-two-with-bow-arrows-is-a-convert-to-islam/'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/14/send-this-muslim-bitch-back-to-the-islamic-hellhole-she-crawled-out-of/>
+{'url': 'https://barenakedislam.com/2021/10/14/send-this-muslim-bitch-back-to-the-islamic-hellhole-she-crawled-out-of/'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/>
+{'url': 'https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/comments/feed/>
+{'url': 'https://barenakedislam.com/comments/feed/'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://wordpress.org/>
+{'url': 'https://wordpress.org/'}
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/13/has-the-united-states-turned-into-china/?replytocom=939818#respond> (referer: https://barenakedislam.com/2021/10/13/has-the-united-states-turned-into-china/)
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/?replytocom=939815#respond> (referer: https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/)
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.studiopress.com/themes/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/13/has-the-united-states-turned-into-china/?replytocom=939825#respond> (referer: https://barenakedislam.com/2021/10/13/has-the-united-states-turned-into-china/)
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/feed/>
+{'url': 'https://barenakedislam.com/feed/'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.studiopress.com/>
+{'url': 'https://www.studiopress.com/'}
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/09/14/islamic-world-sees-taliban-takeover-in-afghanistan-as-victory-of-allah-over-jesus/> (referer: https://barenakedislam.com/category/illegitimate-president/)
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/>
+{'url': 'https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/>
+{'url': 'https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/?replytocom=939900>
+{'url': 'https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/?replytocom=939900'}
+2021-10-16 11:41:25 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://parler.com/main.php> from <GET https://parler.com/profile/Barenakedislam416499685912/posts>
+2021-10-16 11:41:25 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://theunitedwest.org/> from <GET http://theunitedwest.org/>
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2019/01/07/apparently-her-problems-didnt-end-after-the-muslim-doctor-lara-kollab-who-threatened-to-give-jewish-patients-the-wrong-meds-was-fired-from-the-cleveland-clinic/> (referer: https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/)
+2021-10-16 11:41:25 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.thereligionofpeace.com/> from <GET http://www.thereligionofpeace.com/>
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2011/10/29/pakistan-acid-attack-on-nine-year-old-child-bride-by-her-husband/> (referer: https://barenakedislam.com/category/children/)
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/> (referer: https://barenakedislam.com/category/children/)
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2019/11/11/yet-another-reason-for-americans-never-to-use-a-muslim-doctor/> (referer: https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/)
+2021-10-16 11:41:25 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.thomasmore.org/> from <GET http://www.thomasmore.org/>
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/13/has-the-united-states-turned-into-china/?replytocom=939818>
+{'url': 'https://barenakedislam.com/2021/10/13/has-the-united-states-turned-into-china/?replytocom=939818'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/?replytocom=939815>
+{'url': 'https://barenakedislam.com/2021/10/13/taliban-threaten-eu-and-us-unless-economic-sanctions-are-dropped-we-will-flood-your-countries-with-afghan-muslim-freeloaders/?replytocom=939815'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.studiopress.com/themes/>
+{'url': 'https://www.studiopress.com/themes/'}
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/13/has-the-united-states-turned-into-china/?replytocom=939825>
+{'url': 'https://barenakedislam.com/2021/10/13/has-the-united-states-turned-into-china/?replytocom=939825'}
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/?replytocom=939973#respond> (referer: https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/)
+2021-10-16 11:41:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/09/14/islamic-world-sees-taliban-takeover-in-afghanistan-as-victory-of-allah-over-jesus/>
+{'url': 'https://barenakedislam.com/2021/09/14/islamic-world-sees-taliban-takeover-in-afghanistan-as-victory-of-allah-over-jesus/'}
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/09/taliban-steps-up-ethnic-cleansing-of-minority-groups-but-still-demands-humanitarian-aid-from-the-international-community/#comment-939960> (referer: https://barenakedislam.com/2021/10/14/send-this-muslim-bitch-back-to-the-islamic-hellhole-she-crawled-out-of/)
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://vladtepesblog.com/> (referer: None)
+2021-10-16 11:41:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/?replytocom=939985#respond> (referer: https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/)
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2011/10/29/pakistan-acid-attack-on-nine-year-old-child-bride-by-her-husband/>
+{'url': 'https://barenakedislam.com/2011/10/29/pakistan-acid-attack-on-nine-year-old-child-bride-by-her-husband/'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2019/01/07/apparently-her-problems-didnt-end-after-the-muslim-doctor-lara-kollab-who-threatened-to-give-jewish-patients-the-wrong-meds-was-fired-from-the-cleveland-clinic/>
+{'url': 'https://barenakedislam.com/2019/01/07/apparently-her-problems-didnt-end-after-the-muslim-doctor-lara-kollab-who-threatened-to-give-jewish-patients-the-wrong-meds-was-fired-from-the-cleveland-clinic/'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2019/11/11/yet-another-reason-for-americans-never-to-use-a-muslim-doctor/>
+{'url': 'https://barenakedislam.com/2019/11/11/yet-another-reason-for-americans-never-to-use-a-muslim-doctor/'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/>
+{'url': 'https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/'}
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parler.com/main.php> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://redfoxblogger.blogspot.com/> from <GET https://redfoxblogger.blogspot.ca>
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://wildbillforamerica.com/> (referer: None)
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (410) <GET https://refugeeresettlementwatch.wordpress.com/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/?replytocom=939750#respond> (referer: https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/)
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/?replytocom=939752#respond> (referer: https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/)
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/?replytocom=939973>
+{'url': 'https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/?replytocom=939973'}
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/?replytocom=939812#respond> (referer: https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/)
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vladtepesblog.com/>
+{'url': 'https://vladtepesblog.com/'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/09/taliban-steps-up-ethnic-cleansing-of-minority-groups-but-still-demands-humanitarian-aid-from-the-international-community/>
+{'url': 'https://barenakedislam.com/2021/10/09/taliban-steps-up-ethnic-cleansing-of-minority-groups-but-still-demands-humanitarian-aid-from-the-international-community/'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/?replytocom=939985>
+{'url': 'https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/?replytocom=939985'}
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.studiopress.com/themes/jessica/> (referer: https://www.studiopress.com/themes/)
+2021-10-16 11:41:26 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://nowlernen.tech/> (failed 1 times): DNS lookup failed: no results for hostname lookup: nowlernen.tech.
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://parler.com/main.php>
+{'url': 'https://parler.com/main.php'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://wildbillforamerica.com/>
+{'url': 'https://wildbillforamerica.com/'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/?replytocom=939750>
+{'url': 'https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/?replytocom=939750'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/?replytocom=939752>
+{'url': 'https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/?replytocom=939752'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/?replytocom=939812>
+{'url': 'https://barenakedislam.com/2021/10/12/off-topic-not-sure-how-reliable-this-report-is-but-you-might-want-to-reconsider-getting-on-a-plane/?replytocom=939812'}
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/?replytocom=921847#respond> (referer: https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/)
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.studiopress.com/themes/jessica/>
+{'url': 'https://www.studiopress.com/themes/jessica/'}
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parler.com/android.html> (referer: https://parler.com/main.php)
+2021-10-16 11:41:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.theunitedwest.org/> from <GET https://theunitedwest.org/>
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thereligionofpeace.com/> (referer: None)
+2021-10-16 11:41:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.theunitedwest.org/sharia-crime-stoppers/> from <GET https://www.theunitedwest.org/sharia-crime-stoppers>
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887824#respond> (referer: https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/)
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/?replytocom=921846#respond> (referer: https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/)
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/?replytocom=921847>
+{'url': 'https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/?replytocom=921847'}
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/?replytocom=921936#respond> (referer: https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/)
+2021-10-16 11:41:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://ca.godaddy.com/websites/website-builder?isc=pwugc&utm_source=wsb&utm_medium=applications&utm_campaign=en-us_corp_applications_base> from <GET https://www.godaddy.com/websites/website-builder?isc=pwugc&utm_source=wsb&utm_medium=applications&utm_campaign=en-us_corp_applications_base>
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887846#respond> (referer: https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/)
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887821#respond> (referer: https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/)
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://parler.com/android.html>
+{'url': 'https://parler.com/android.html'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.thereligionofpeace.com/>
+{'url': 'https://www.thereligionofpeace.com/'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887824>
+{'url': 'https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887824'}
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2020/10/04/yet-another-muslim-jew-hater-in-the-medical-field-revealed-by-watchdog-group-canary-mission/> (referer: https://barenakedislam.com/2021/10/15/more-reasons-to-avoid-using-muslim-doctors-especially-if-you-are-jewish/)
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parler.com/ccpa-requests.php> (referer: https://parler.com/main.php)
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thomasmore.org/> (referer: None)
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887906#respond> (referer: https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/)
+2021-10-16 11:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887843#respond> (referer: https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/)
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/?replytocom=921846>
+{'url': 'https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/?replytocom=921846'}
+2021-10-16 11:41:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/?replytocom=921936>
+{'url': 'https://barenakedislam.com/2021/01/11/warning-truly-one-of-the-most-gruesome-isis-execution-videos-youve-ever-seen/?replytocom=921936'}
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887846>
+{'url': 'https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887846'}
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887821>
+{'url': 'https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887821'}
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2020/10/04/yet-another-muslim-jew-hater-in-the-medical-field-revealed-by-watchdog-group-canary-mission/>
+{'url': 'https://barenakedislam.com/2020/10/04/yet-another-muslim-jew-hater-in-the-medical-field-revealed-by-watchdog-group-canary-mission/'}
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.thomasmore.org/>
+{'url': 'https://www.thomasmore.org/'}
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://parler.com/ccpa-requests.php>
+{'url': 'https://parler.com/ccpa-requests.php'}
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887906>
+{'url': 'https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887906'}
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887843>
+{'url': 'https://barenakedislam.com/2020/07/03/shocker-9-year-old-chubby-girl-converts-to-islam/?replytocom=887843'}
+2021-10-16 11:41:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thereligionofpeace.com/pages/articles/opinion-polls.aspx> (referer: https://www.thereligionofpeace.com/)
+2021-10-16 11:41:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/> (referer: None)
+2021-10-16 11:41:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://policies.google.com/terms> (referer: https://wildbillforamerica.com/)
+2021-10-16 11:41:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://policies.google.com/privacy> (referer: https://wildbillforamerica.com/)
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.thereligionofpeace.com/pages/articles/opinion-polls.aspx>
+{'url': 'https://www.thereligionofpeace.com/pages/articles/opinion-polls.aspx'}
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/>
+{'url': 'https://www.theunitedwest.org/'}
+2021-10-16 11:41:27 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.france24.com/en/live-news/20211013-taliban-warn-us-eu-of-refugees-if-afghan-sanctions-continue> (referer: https://www.thereligionofpeace.com/)
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://policies.google.com/terms>
+{'url': 'https://policies.google.com/terms'}
+2021-10-16 11:41:27 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (meta refresh) to <GET https://parler.com/ccpa-requests.php> from <GET https://parler.com/ccpa-requests.html>
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://policies.google.com/privacy>
+{'url': 'https://policies.google.com/privacy'}
+2021-10-16 11:41:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ca.godaddy.com/websites/website-builder?isc=pwugc&utm_source=wsb&utm_medium=applications&utm_campaign=en-us_corp_applications_base> (referer: https://wildbillforamerica.com/)
+2021-10-16 11:41:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://app.trinethire.com/companies/34967-parler-llc/jobs> (referer: https://parler.com/main.php)
+2021-10-16 11:41:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/sharia-crime-stoppers/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ca.godaddy.com/websites/website-builder?isc=pwugc&utm_source=wsb&utm_medium=applications&utm_campaign=en-us_corp_applications_base>
+{'url': 'https://ca.godaddy.com/websites/website-builder?isc=pwugc&utm_source=wsb&utm_medium=applications&utm_campaign=en-us_corp_applications_base'}
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://app.trinethire.com/companies/34967-parler-llc/jobs>
+{'url': 'https://app.trinethire.com/companies/34967-parler-llc/jobs'}
+2021-10-16 11:41:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/sharia-crime-stoppers/>
+{'url': 'https://www.theunitedwest.org/sharia-crime-stoppers/'}
+2021-10-16 11:41:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thomasmore.org/?mobile_switch=mobile> (referer: https://www.thomasmore.org/)
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://apps.apple.com/us/app/parler/id1402727988> (referer: https://parler.com/main.php)
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.thomasmore.org/?mobile_switch=mobile>
+{'url': 'https://www.thomasmore.org/?mobile_switch=mobile'}
+2021-10-16 11:41:28 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://support.parler.com> (failed 1 times): DNS lookup failed: no results for hostname lookup: support.parler.com.
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/author/clare-lopez/> (referer: https://www.theunitedwest.org/)
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://apps.apple.com/us/app/parler/id1402727988>
+{'url': 'https://apps.apple.com/us/app/parler/id1402727988'}
+2021-10-16 11:41:28 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.google.com/contact> from <GET https://google.com/contact>
+2021-10-16 11:41:28 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://contacts.google.com/&followup=https://contacts.google.com/> from <GET https://contacts.google.com>
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/author/clare-lopez/>
+{'url': 'https://www.theunitedwest.org/author/clare-lopez/'}
+2021-10-16 11:41:28 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1> from <GET https://support.google.com/chrome?p=privpol_chrsync>
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.youtube.com/playlist?list=PLEtG1FuuCoK1a3d6pu4BdjmfiOPMoYAZu> (referer: https://www.theunitedwest.org/sharia-crime-stoppers/)
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.apple.com/sitemap/> (referer: https://apps.apple.com/us/app/parler/id1402727988)
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/donate/> (referer: https://www.theunitedwest.org/)
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://contacts.google.com/&followup=https://contacts.google.com/> (referer: https://policies.google.com/privacy)
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://palwatch.org/page/21742> (referer: https://www.thereligionofpeace.com/)
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.youtube.com/playlist?list=PLEtG1FuuCoK1a3d6pu4BdjmfiOPMoYAZu>
+{'url': 'https://www.youtube.com/playlist?list=PLEtG1FuuCoK1a3d6pu4BdjmfiOPMoYAZu'}
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.apple.com/sitemap/>
+{'url': 'https://www.apple.com/sitemap/'}
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.youtube.com/new> (referer: https://www.youtube.com/playlist?list=PLEtG1FuuCoK1a3d6pu4BdjmfiOPMoYAZu)
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/donate/>
+{'url': 'https://www.theunitedwest.org/donate/'}
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://contacts.google.com/&followup=https://contacts.google.com/>
+{'url': 'https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://contacts.google.com/&followup=https://contacts.google.com/'}
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1> (referer: https://policies.google.com/privacy)
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://palwatch.org/page/21742>
+{'url': 'https://palwatch.org/page/21742'}
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.youtube.com/new>
+{'url': 'https://www.youtube.com/new'}
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thomasmore.org/?mobile_switch=desktop> (referer: https://www.thomasmore.org/?mobile_switch=mobile)
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1>
+{'url': 'https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1'}
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/2020/06/18/rated-extremely-dangerous-islamic-association-of-west-virginia-charleston-wv/> (referer: https://www.theunitedwest.org/sharia-crime-stoppers/)
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/author/mary-w/> (referer: https://www.theunitedwest.org/sharia-crime-stoppers/)
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://palwatch.org/> (referer: https://palwatch.org/page/21742)
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.thomasmore.org/?mobile_switch=desktop>
+{'url': 'https://www.thomasmore.org/?mobile_switch=desktop'}
+2021-10-16 11:41:28 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://support.google.com/accounts/?hl=en-GB> from <GET http://www.google.com/support/accounts?hl=en-GB>
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://demo.9seeds.com/jessica/> (referer: https://www.studiopress.com/themes/jessica/)
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://redfoxblogger.blogspot.com/> (referer: https://barenakedislam.com/)
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/2020/06/18/rated-extremely-dangerous-islamic-association-of-west-virginia-charleston-wv/>
+{'url': 'https://www.theunitedwest.org/2020/06/18/rated-extremely-dangerous-islamic-association-of-west-virginia-charleston-wv/'}
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/author/mary-w/>
+{'url': 'https://www.theunitedwest.org/author/mary-w/'}
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://palwatch.org/>
+{'url': 'https://palwatch.org/'}
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://9seeds.com/product/jessica/> (referer: https://www.studiopress.com/themes/jessica/)
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/author/clare-lopez/page/2/> (referer: https://www.theunitedwest.org/author/clare-lopez/)
+2021-10-16 11:41:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.google.com/chrome/tips/> (referer: https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1)
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://demo.9seeds.com/jessica/>
+{'url': 'https://demo.9seeds.com/jessica/'}
+2021-10-16 11:41:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://redfoxblogger.blogspot.com/>
+{'url': 'https://redfoxblogger.blogspot.com/'}
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/author/clare-lopez/page/3/> (referer: https://www.theunitedwest.org/author/clare-lopez/)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/author/clare-lopez/page/6/> (referer: https://www.theunitedwest.org/author/clare-lopez/)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1&co=GENIE.Platform%3DiOS> (referer: https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1&co=GENIE.Platform%3DAndroid> (referer: https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://palwatch.org/analysis/1667> (referer: https://palwatch.org/page/21742)
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://9seeds.com/product/jessica/>
+{'url': 'https://9seeds.com/product/jessica/'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/author/clare-lopez/page/2/>
+{'url': 'https://www.theunitedwest.org/author/clare-lopez/page/2/'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.google.com/chrome/tips/>
+{'url': 'https://www.google.com/chrome/tips/'}
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/chrome/answer/6197437?hl=en&ref_topic=7439637> (referer: https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/2021/02/25/bidens-meetings-with-iran-serve-no-useful-purpose/> (referer: https://www.theunitedwest.org/author/clare-lopez/)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/chrome/answer/6130773?hl=en&ref_topic=7439637> (referer: https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1)
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/author/clare-lopez/page/3/>
+{'url': 'https://www.theunitedwest.org/author/clare-lopez/page/3/'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/author/clare-lopez/page/6/>
+{'url': 'https://www.theunitedwest.org/author/clare-lopez/page/6/'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1&co=GENIE.Platform%3DiOS>
+{'url': 'https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1&co=GENIE.Platform%3DiOS'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1&co=GENIE.Platform%3DAndroid>
+{'url': 'https://support.google.com/chrome/answer/185277?ref_topic=7439637&p=privpol_chrsync&visit_id=637699956880368357-3754952652&rd=1&co=GENIE.Platform%3DAndroid'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://palwatch.org/analysis/1667>
+{'url': 'https://palwatch.org/analysis/1667'}
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/accounts/?hl=en-GB> (referer: None)
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/chrome/answer/6197437?hl=en&ref_topic=7439637>
+{'url': 'https://support.google.com/chrome/answer/6197437?hl=en&ref_topic=7439637'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/2021/02/25/bidens-meetings-with-iran-serve-no-useful-purpose/>
+{'url': 'https://www.theunitedwest.org/2021/02/25/bidens-meetings-with-iran-serve-no-useful-purpose/'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/chrome/answer/6130773?hl=en&ref_topic=7439637>
+{'url': 'https://support.google.com/chrome/answer/6130773?hl=en&ref_topic=7439637'}
+2021-10-16 11:41:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (308) to <GET https://www.amazon.com/s/ref%3dnb_sb_noss?url=search-alias%3Ddigital-text&field-keywords=david+horowitz&rh=n:133140011%2ck:david+horowitz&ajr=0> from <GET http://www.amazon.com/s/ref%3dnb_sb_noss?url=search-alias%3Ddigital-text&field-keywords=david+horowitz&rh=n:133140011%2ck:david+horowitz&ajr=0#/ref=sr_st?keywords=david+horowitz&qid=1316459840&rh=n:133140011%2ck:david+horowitz&sort=daterank>
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/author/mary-w/page/5/> (referer: https://www.theunitedwest.org/author/mary-w/)
+2021-10-16 11:41:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.legal-project.org/topics/13> from <GET http://www.legal-project.org/docs/cat/13>
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/accounts/?hl=en-GB>
+{'url': 'https://support.google.com/accounts/?hl=en-GB'}
+2021-10-16 11:41:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.legal-project.org/topics/15> from <GET http://www.legal-project.org/docs/cat/15>
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://redfoxblogger.blogspot.com/2014/01/america-beautiful-may-16th-take-your.html> (referer: https://redfoxblogger.blogspot.com/)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/author/mary-w/page/2/> (referer: https://www.theunitedwest.org/author/mary-w/)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/author/mary-w/page/3/> (referer: https://www.theunitedwest.org/author/mary-w/)
+2021-10-16 11:41:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://support.google.com/chrome/answer/95315?visit_id=637699956893629673-2125115984&p=beta_promo&rd=1> from <GET https://support.google.com/chrome/?p=beta_promo>
+2021-10-16 11:41:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://apps.apple.com/us/app/chrome/id535886823> from <GET https://itunes.apple.com/us/app/chrome/id535886823>
+2021-10-16 11:41:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.google.com/safetycenter/everyone/start/> from <GET https://www.google.com/goodtoknow/online-safety/>
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://palwatch.org/analysis/1667?significance=1> (referer: https://palwatch.org/analysis/1667)
+2021-10-16 11:41:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://safety.google/security/> from <GET https://www.google.com/safetycenter/everyone/start/>
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/author/mary-w/page/5/>
+{'url': 'https://www.theunitedwest.org/author/mary-w/page/5/'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://redfoxblogger.blogspot.com/2014/01/america-beautiful-may-16th-take-your.html>
+{'url': 'https://redfoxblogger.blogspot.com/2014/01/america-beautiful-may-16th-take-your.html'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/author/mary-w/page/2/>
+{'url': 'https://www.theunitedwest.org/author/mary-w/page/2/'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/author/mary-w/page/3/>
+{'url': 'https://www.theunitedwest.org/author/mary-w/page/3/'}
+2021-10-16 11:41:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.google.com/landing/2step/> from <GET https://www.google.com/landing/2step>
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://play.google.com/store/apps/details?id=com.android.chrome&pcampaignid=websitedialog> (referer: https://www.google.com/chrome/tips/)
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://palwatch.org/analysis/1667?significance=1>
+{'url': 'https://palwatch.org/analysis/1667?significance=1'}
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/accounts/answer/463?hl=en-GB&ref_topic=7189311> (referer: https://support.google.com/accounts/?hl=en-GB)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/chrome/answer/95315?visit_id=637699956893629673-2125115984&p=beta_promo&rd=1> (referer: https://support.google.com/chrome/answer/6130773?hl=en&ref_topic=7439637)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/2018/10/13/democrat-stacey-abrams-bad-for-georgia-stands-with-dangerous-supporters/> (referer: https://www.theunitedwest.org/author/mary-w/)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.google.com/landing/2step/> (referer: https://support.google.com/accounts/?hl=en-GB)
+2021-10-16 11:41:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/david-horowitz-Kindle-Store/s?k=david+horowitz&rh=n%3A133140011> from <GET https://www.amazon.com/s/ref%3dnb_sb_noss?url=search-alias%3Ddigital-text&field-keywords=david+horowitz&rh=n:133140011%2ck:david+horowitz&ajr=0>
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://play.google.com/store/apps/details?id=com.android.chrome&pcampaignid=websitedialog>
+{'url': 'https://play.google.com/store/apps/details?id=com.android.chrome&pcampaignid=websitedialog'}
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/accounts/answer/2736362?hl=en-GB&ref_topic=7189311> (referer: https://support.google.com/accounts/?hl=en-GB)
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://GitHub.com/9seeds/> (referer: https://9seeds.com/product/jessica/)
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/accounts/answer/463?hl=en-GB&ref_topic=7189311>
+{'url': 'https://support.google.com/accounts/answer/463?hl=en-GB&ref_topic=7189311'}
+2021-10-16 11:41:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://safety.google/security/> (referer: https://support.google.com/accounts/?hl=en-GB)
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/chrome/answer/95315?visit_id=637699956893629673-2125115984&p=beta_promo&rd=1>
+{'url': 'https://support.google.com/chrome/answer/95315?visit_id=637699956893629673-2125115984&p=beta_promo&rd=1'}
+2021-10-16 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/2018/10/13/democrat-stacey-abrams-bad-for-georgia-stands-with-dangerous-supporters/>
+{'url': 'https://www.theunitedwest.org/2018/10/13/democrat-stacey-abrams-bad-for-georgia-stands-with-dangerous-supporters/'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.google.com/landing/2step/>
+{'url': 'https://www.google.com/landing/2step/'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/accounts/answer/2736362?hl=en-GB&ref_topic=7189311>
+{'url': 'https://support.google.com/accounts/answer/2736362?hl=en-GB&ref_topic=7189311'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://GitHub.com/9seeds/>
+{'url': 'https://GitHub.com/9seeds/'}
+2021-10-16 11:41:30 [py.warnings] WARNING: D:\Projects\hackhatecanada\webpage-parser\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py:287: RuntimeWarning: Could not load referrer policy 'origin-when-cross-origin, strict-origin-when-cross-origin'
+  warnings.warn(msg, RuntimeWarning)
+
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://play.google.com/store/apps/dev?id=6928237143520558692> (referer: https://play.google.com/store/apps/details?id=com.android.chrome&pcampaignid=websitedialog)
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://safety.google/security/>
+{'url': 'https://safety.google/security/'}
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.opindia.com/2021/10/punjab-man-attacked-not-converting-islam-police-refused-to-lodge-complaint-police-denies/> (referer: https://www.thereligionofpeace.com/)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/accounts/answer/2736362?hl=en&ref_topic=7189311> (referer: https://support.google.com/accounts/answer/463?hl=en-GB&ref_topic=7189311)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://safety.google/families/family-friendly-experiences/> (referer: https://safety.google/security/)
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://play.google.com/store/apps/dev?id=6928237143520558692>
+{'url': 'https://play.google.com/store/apps/dev?id=6928237143520558692'}
+2021-10-16 11:41:30 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://support.google.com/> from <GET https://support.google.com?hl=en-GB>
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/topics/13> (referer: None)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://safety.google/partners/> (referer: https://safety.google/security/)
+2021-10-16 11:41:30 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://play.google.com/intl/en-GB_ca/about/giftcards/> from <GET https://play.google.com/intl/en-GB_ca/about/giftcards>
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/topics/15> (referer: None)
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.opindia.com/2021/10/punjab-man-attacked-not-converting-islam-police-refused-to-lodge-complaint-police-denies/>
+{'url': 'https://www.opindia.com/2021/10/punjab-man-attacked-not-converting-islam-police-refused-to-lodge-complaint-police-denies/'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/accounts/answer/2736362?hl=en&ref_topic=7189311>
+{'url': 'https://support.google.com/accounts/answer/2736362?hl=en&ref_topic=7189311'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://safety.google/families/family-friendly-experiences/>
+{'url': 'https://safety.google/families/family-friendly-experiences/'}
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://play.google.com/intl/en-GB_ca/about/giftcards/> (referer: https://play.google.com/store/apps/dev?id=6928237143520558692)
+2021-10-16 11:41:30 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://payments.google.com/payments/apis-secure/get_legal_document?ldl=en&ldo=0&ldt=buyertos> from <GET https://payments.google.com/termsOfService?hl=en>
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com/david-horowitz-Kindle-Store/s?k=david+horowitz&rh=n%3A133140011> (referer: None)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://security.googleblog.com/> (referer: https://safety.google/security/)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/author/mary-w/page/4/> (referer: https://www.theunitedwest.org/author/mary-w/page/5/)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/2017/09/14/cant-we-talk-about-this/> (referer: https://www.theunitedwest.org/author/mary-w/page/3/)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://play.google.com/store/apps/dev?id%3D6928237143520558692&followup=https://play.google.com/store/apps/dev?id%3D6928237143520558692&ec=GAZATg> (referer: https://play.google.com/store/apps/dev?id=6928237143520558692)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.republicworld.com/amp/world-news/rest-of-the-world-news/afghanistan-crisis-girls-teachers-demand-reopening-of-schools-in-more-provinces.html> (referer: https://www.thereligionofpeace.com/)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://apps.apple.com/us/app/chrome/id535886823> (referer: https://www.google.com/chrome/tips/)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/2017/09/23/clarion-has-it-wrong-5-things-you-can-do-to-challenge-radical-islam/> (referer: https://www.theunitedwest.org/author/mary-w/page/3/)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/2017/10/15/islam-in-the-west/> (referer: https://www.theunitedwest.org/author/mary-w/page/3/)
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.theunitedwest.org/2017/09/11/muslim-dream-of-hell-and-jesus/> (referer: https://www.theunitedwest.org/author/mary-w/page/3/)
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/topics/13>
+{'url': 'http://www.legal-project.org/topics/13'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://safety.google/partners/>
+{'url': 'https://safety.google/partners/'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/topics/15>
+{'url': 'http://www.legal-project.org/topics/15'}
+2021-10-16 11:41:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://safety.google/intl/fr_ca/families/family-friendly-experiences/> (referer: https://safety.google/families/family-friendly-experiences/)
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://play.google.com/intl/en-GB_ca/about/giftcards/>
+{'url': 'https://play.google.com/intl/en-GB_ca/about/giftcards/'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.com/david-horowitz-Kindle-Store/s?k=david+horowitz&rh=n%3A133140011>
+{'url': 'https://www.amazon.com/david-horowitz-Kindle-Store/s?k=david+horowitz&rh=n%3A133140011'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://security.googleblog.com/>
+{'url': 'https://security.googleblog.com/'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/author/mary-w/page/4/>
+{'url': 'https://www.theunitedwest.org/author/mary-w/page/4/'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/2017/09/14/cant-we-talk-about-this/>
+{'url': 'https://www.theunitedwest.org/2017/09/14/cant-we-talk-about-this/'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://apps.apple.com/us/app/chrome/id535886823>
+{'url': 'https://apps.apple.com/us/app/chrome/id535886823'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://play.google.com/store/apps/dev?id%3D6928237143520558692&followup=https://play.google.com/store/apps/dev?id%3D6928237143520558692&ec=GAZATg>
+{'url': 'https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://play.google.com/store/apps/dev?id%3D6928237143520558692&followup=https://play.google.com/store/apps/dev?id%3D6928237143520558692&ec=GAZATg'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.republicworld.com/amp/world-news/rest-of-the-world-news/afghanistan-crisis-girls-teachers-demand-reopening-of-schools-in-more-provinces.html>
+{'url': 'https://www.republicworld.com/amp/world-news/rest-of-the-world-news/afghanistan-crisis-girls-teachers-demand-reopening-of-schools-in-more-provinces.html'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/2017/09/23/clarion-has-it-wrong-5-things-you-can-do-to-challenge-radical-islam/>
+{'url': 'https://www.theunitedwest.org/2017/09/23/clarion-has-it-wrong-5-things-you-can-do-to-challenge-radical-islam/'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/2017/10/15/islam-in-the-west/>
+{'url': 'https://www.theunitedwest.org/2017/10/15/islam-in-the-west/'}
+2021-10-16 11:41:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.theunitedwest.org/2017/09/11/muslim-dream-of-hell-and-jesus/>
+{'url': 'https://www.theunitedwest.org/2017/09/11/muslim-dream-of-hell-and-jesus/'}
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://payments.google.com/payments/apis-secure/get_legal_document?ldl=en&ldo=0&ldt=buyertos> (referer: https://play.google.com/store/apps/details?id=com.android.chrome&pcampaignid=websitedialog)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://tribune.com.pk/story/2324502/punjabs-growing-lust-for-blood-sports-and-gambling> (referer: https://www.thereligionofpeace.com/)
+2021-10-16 11:41:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice&ldl=en_GB> from <GET https://payments.google.com/legaldocument?family=0.privacynotice&hl=en_GB>
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/4065/obama-benghazi-propagandist> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://support.google.com/?hl=en> (referer: https://safety.google/families/family-friendly-experiences/)
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://safety.google/intl/fr_ca/families/family-friendly-experiences/>
+{'url': 'https://safety.google/intl/fr_ca/families/family-friendly-experiences/'}
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://payments.google.com/payments/apis-secure/get_legal_document?ldl=en&ldo=0&ldt=buyertos>
+{'url': 'https://payments.google.com/payments/apis-secure/get_legal_document?ldl=en&ldo=0&ldt=buyertos'}
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://tribune.com.pk/story/2324502/punjabs-growing-lust-for-blood-sports-and-gambling>
+{'url': 'https://tribune.com.pk/story/2324502/punjabs-growing-lust-for-blood-sports-and-gambling'}
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/4065/obama-benghazi-propagandist>
+{'url': 'http://www.legal-project.org/4065/obama-benghazi-propagandist'}
+2021-10-16 11:41:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://edu.google.com/why-google/privacy-security/> from <GET https://edu.google.com/training-support/privacy-security/>
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice&ldl=en_GB> (referer: https://play.google.com/store/apps/dev?id=6928237143520558692)
+2021-10-16 11:41:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://mediasmarts.ca/> from <GET http://mediasmarts.ca/>
+2021-10-16 11:41:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://play.google.com/console/about/teacherapproved/> from <GET https://developer.android.com/google-play/guides/teacher-approved-apps>
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/3806/sc-admits-petition-against-sherry-over-alleged> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/3812/popular-atheist-blogger-stabbed-repeatedly-by> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://support.google.com/?hl=en>
+{'url': 'https://support.google.com/?hl=en'}
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://safety.google/intl/fr_ca/partners/> (referer: https://safety.google/partners/)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.protectchildren.ca/en/> (referer: https://safety.google/partners/)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/3816/prosecutor-general-investigates-defamation> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice&ldl=en_GB>
+{'url': 'https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice&ldl=en_GB'}
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/3806/sc-admits-petition-against-sherry-over-alleged>
+{'url': 'http://www.legal-project.org/3806/sc-admits-petition-against-sherry-over-alleged'}
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/3812/popular-atheist-blogger-stabbed-repeatedly-by>
+{'url': 'http://www.legal-project.org/3812/popular-atheist-blogger-stabbed-repeatedly-by'}
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://play.google.com/console/about/teacherapproved/> (referer: https://safety.google/families/family-friendly-experiences/)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/3579/from-man-who-insulted-muhammad-no-regret> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://edu.google.com/products/chromebooks/?modal_active=none> (referer: https://safety.google/families/family-friendly-experiences/)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/3340/muslim-american-interfaith-group-calls-for> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/3344/islam-angry-literalists-are-only-at-halfway-point> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://safety.google/intl/fr_ca/partners/>
+{'url': 'https://safety.google/intl/fr_ca/partners/'}
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.protectchildren.ca/en/>
+{'url': 'https://www.protectchildren.ca/en/'}
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://feedburner.google.com/fb/a/mailverify?uri=OpIndia&loc=en_US> (referer: https://www.opindia.com/2021/10/punjab-man-attacked-not-converting-islam-police-refused-to-lodge-complaint-police-denies/)
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/3816/prosecutor-general-investigates-defamation>
+{'url': 'http://www.legal-project.org/3816/prosecutor-general-investigates-defamation'}
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.opindia.com/latest-news/> (referer: https://www.opindia.com/2021/10/punjab-man-attacked-not-converting-islam-police-refused-to-lodge-complaint-police-denies/)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/3037/no-no-no-no> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/3348/the-muslim-rage-meme> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/3579/from-man-who-insulted-muhammad-no-regret>
+{'url': 'http://www.legal-project.org/3579/from-man-who-insulted-muhammad-no-regret'}
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://play.google.com/console/about/teacherapproved/>
+{'url': 'https://play.google.com/console/about/teacherapproved/'}
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://edu.google.com/products/chromebooks/?modal_active=none>
+{'url': 'https://edu.google.com/products/chromebooks/?modal_active=none'}
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/3340/muslim-american-interfaith-group-calls-for>
+{'url': 'http://www.legal-project.org/3340/muslim-american-interfaith-group-calls-for'}
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/3344/islam-angry-literalists-are-only-at-halfway-point>
+{'url': 'http://www.legal-project.org/3344/islam-angry-literalists-are-only-at-halfway-point'}
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://edu.google.com/why-google/privacy-security/> (referer: https://safety.google/families/family-friendly-experiences/)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/2747/thousands-in-pakistan-beat-a-man-to-death-burn> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/3127/the-coming-battle-over-freedom-of-speech> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/2750/morocco-salafi-clerics-back-death-for-journalist> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mediasmarts.ca/> (referer: None)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/2759/indonesian-prosecutors-demand-4-years-for-shiite> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/2772/indonesia-shia-cleric-convicted-of-blasphemy> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/3128/sacred-cows-muslims-over-mormons> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://feedburner.google.com/fb/a/mailverify?uri=OpIndia&loc=en_US>
+{'url': 'https://feedburner.google.com/fb/a/mailverify?uri=OpIndia&loc=en_US'}
+2021-10-16 11:41:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.opindia.com/latest-news/>
+{'url': 'https://www.opindia.com/latest-news/'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/3037/no-no-no-no>
+{'url': 'http://www.legal-project.org/3037/no-no-no-no'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/3348/the-muslim-rage-meme>
+{'url': 'http://www.legal-project.org/3348/the-muslim-rage-meme'}
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/2773/blasphemy-law-proposed-in-iraqi-kurdistan-after> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/1915/angry-mpa-if-you-block-jesus-christ-how-will-we> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:32 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/1206/pakistani-christian-sentenced-for-blasphemy-dies> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/1207/pakistan-cia-contractor-released-after-234mln-in> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/blog/2012/01/north-american-muslims-join-efforts-to-support> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/blog/2013/02/how-sickening-will-sweden-get> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:32 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://edu.google.com/why-google/privacy-security/>
+{'url': 'https://edu.google.com/why-google/privacy-security/'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/2747/thousands-in-pakistan-beat-a-man-to-death-burn>
+{'url': 'http://www.legal-project.org/2747/thousands-in-pakistan-beat-a-man-to-death-burn'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/3127/the-coming-battle-over-freedom-of-speech>
+{'url': 'http://www.legal-project.org/3127/the-coming-battle-over-freedom-of-speech'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mediasmarts.ca/>
+{'url': 'https://mediasmarts.ca/'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/2750/morocco-salafi-clerics-back-death-for-journalist>
+{'url': 'http://www.legal-project.org/2750/morocco-salafi-clerics-back-death-for-journalist'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/2759/indonesian-prosecutors-demand-4-years-for-shiite>
+{'url': 'http://www.legal-project.org/2759/indonesian-prosecutors-demand-4-years-for-shiite'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/2772/indonesia-shia-cleric-convicted-of-blasphemy>
+{'url': 'http://www.legal-project.org/2772/indonesia-shia-cleric-convicted-of-blasphemy'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/3128/sacred-cows-muslims-over-mormons>
+{'url': 'http://www.legal-project.org/3128/sacred-cows-muslims-over-mormons'}
+2021-10-16 11:41:32 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.google.com/accounts/TOS?gsessionid=6f3LOyK14yNFlWl-yI_dBiRQn9kEbA7II6uDwCOWU8g> from <GET https://feedburner.google.com/fb/a/tos?gsessionid=6f3LOyK14yNFlWl-yI_dBiRQn9kEbA7II6uDwCOWU8g>
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/1071/blasphemy-in-pakistan> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/1078/blasphemy-laws-must-not-be-scrapped-says-musharraf> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/1081/us-seeks-end-to-discriminatory-applications-for> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.legal-project.org/1094/islam-and-the-intolerance-problem> (referer: http://www.legal-project.org/topics/15)
+2021-10-16 11:41:32 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.egyptindependent.com/news/prosecutor-general-investigates-defamation-islam-charges-against-eissa> from <GET http://www.egyptindependent.com/news/prosecutor-general-investigates-defamation-islam-charges-against-eissa>
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.facebook.com/theunitedwest/> (referer: https://www.theunitedwest.org/)
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/2773/blasphemy-law-proposed-in-iraqi-kurdistan-after>
+{'url': 'http://www.legal-project.org/2773/blasphemy-law-proposed-in-iraqi-kurdistan-after'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/1915/angry-mpa-if-you-block-jesus-christ-how-will-we>
+{'url': 'http://www.legal-project.org/1915/angry-mpa-if-you-block-jesus-christ-how-will-we'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/1207/pakistan-cia-contractor-released-after-234mln-in>
+{'url': 'http://www.legal-project.org/1207/pakistan-cia-contractor-released-after-234mln-in'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/1206/pakistani-christian-sentenced-for-blasphemy-dies>
+{'url': 'http://www.legal-project.org/1206/pakistani-christian-sentenced-for-blasphemy-dies'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/blog/2012/01/north-american-muslims-join-efforts-to-support>
+{'url': 'http://www.legal-project.org/blog/2012/01/north-american-muslims-join-efforts-to-support'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/blog/2013/02/how-sickening-will-sweden-get>
+{'url': 'http://www.legal-project.org/blog/2013/02/how-sickening-will-sweden-get'}
+2021-10-16 11:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.opindia.com/privacy-policy/> (referer: https://www.opindia.com/2021/10/punjab-man-attacked-not-converting-islam-police-refused-to-lodge-complaint-police-denies/)
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/1071/blasphemy-in-pakistan>
+{'url': 'http://www.legal-project.org/1071/blasphemy-in-pakistan'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/1078/blasphemy-laws-must-not-be-scrapped-says-musharraf>
+{'url': 'http://www.legal-project.org/1078/blasphemy-laws-must-not-be-scrapped-says-musharraf'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/1081/us-seeks-end-to-discriminatory-applications-for>
+{'url': 'http://www.legal-project.org/1081/us-seeks-end-to-discriminatory-applications-for'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.legal-project.org/1094/islam-and-the-intolerance-problem>
+{'url': 'http://www.legal-project.org/1094/islam-and-the-intolerance-problem'}
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.facebook.com/theunitedwest/>
+{'url': 'https://www.facebook.com/theunitedwest/'}
+2021-10-16 11:41:32 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.google.com/accounts/ServiceLogin?service=feedburner&continue=https%3A%2F%2Ffeedburner.google.com%2Ffb%2Fa%2Fmyfeeds> from <GET https://feedburner.google.com/fb/a/home?gsessionid=6f3LOyK14yNFlWl-yI_dBiRQn9kEbA7II6uDwCOWU8g>
+2021-10-16 11:41:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.opindia.com/privacy-policy/>
+{'url': 'https://www.opindia.com/privacy-policy/'}
+2021-10-16 11:41:32 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2021-10-16 11:41:32 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (307) to <GET https://www.bloomberg.com/tosv2.html?vid=&uuid=89900df0-2e97-11ec-a7b7-69547858615a&url=L25ld3MvMjAxMi0wOS0yNC8tbXVzbGltLXJhZ2UtaGFzLWxpdHRsZS10by1kby13aXRoLWR1bWItdmlkZW8uaHRtbA==> from <GET https://www.bloomberg.com/news/2012-09-24/-muslim-rage-has-little-to-do-with-dumb-video.html>
+2021-10-16 11:41:32 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.bloomberg.com/video/anti-u-s-riots-continue-in-cairo-t~qqiJH9R2OhYrHNgYp8QQ.html> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2021-10-16 11:41:32 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.opindia.com/terms-and-conditions/> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]

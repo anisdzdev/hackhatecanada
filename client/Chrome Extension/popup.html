@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+    />
+  </head>
+
+  <body>
+    <div class="hcc-card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title orange">Hate Speech Scanner</h5>
+        <p class="card-text" style="text-align: justify; color: #c8c8c8">
+          Hey there! We detect websites that potentially contain harmful and
+          offensive content. Join us to promote a safer and cleaner online
+          environment !
+        </p>
+        <h6 class="orange" style="font-weight: bold">
+          What word/expression would you consider offensive?
+        </h6>
+        <button type="button" class="hcc-btn" id="hcc-report-btn">
+          Report
+        </button>
+        <form class="hcc-hidden" id="hcc-form">
+          <label for="inp" class="inp">
+            <input
+              class="hcc-form-input"
+              type="text"
+              id="inp"
+              placeholder="&nbsp;"
+            />
+            <span class="label">Type here</span>
+            <span class="focus-bg"></span>
+          </label>
+          <button class="hcc-btn" type="submit">Send</button>
+        </form>
+        <br />
+        <p class="hcc-card-bottom-text" style="text-align: justify">
+          <a
+            href="https://www.cfr.org/backgrounder/hate-speech-social-media-global-comparisons"
+            class="white"
+            style="text-decoration: none"
+            target="_blank"
+          >
+            Learn more</a
+          >
+          about the definition of hate speech and its impact on our society.
+        </p>
+      </div>
+    </div>
+    <script src="popupJS.js"></script>
+  </body>
+</html>

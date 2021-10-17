@@ -43,7 +43,8 @@ axios.get('collinfo.json')
                         delete url.length;
                         delete url.offset;
                         delete url.filename;
-
+                        
+                        url.isUsed = false;
                         acceptedUrls.push(url);
                     }
                 })
