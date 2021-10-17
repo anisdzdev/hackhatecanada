@@ -17,12 +17,19 @@ function postExpression() {
     null,
     {
       code: `document.all[0].innerText`,
-      allFrames: false, // this is the default
+      allFrames: false,
       runAt: 'document_start', // default is document_idle. See https://stackoverflow.com/q/42509273 for more details.
-    },
-    function (results) {
-      var result = results[0];
-      if (!result.includes(value)) {
+    }, function (results) {
+      if(!results || results.length === 0){
+        return;
+      }
+      const result = results[0];
+      if (value.trim().match(/\b(\w+)\b/g).length < 2){
+        document.getElementById('hcc-form').classList.add('hcc-hidden');
+        document.getElementById('hcc-provide-good').classList.remove('hcc-hidden');
+        return;
+      }
+      if (result.includes(value)) {
         fetch('http://localhost:5000/ai/report', {
           method: 'POST',
           mode: 'no-cors',
@@ -34,33 +41,33 @@ function postExpression() {
             url: url,
             words: [value],
           },
-        })
-          .then(function (response) {
-            if (response.ok) {
-              document.getElementById('hcc-form').classList.add('hcc-hidden');
-              const button = document.getElementById('hcc-report-btn');
-              const message = document.getElementById('hcc-message');
-              message.style.color = 'lime';
-              button.innerHTML = 'Report Another';
-              message.innerHTML =
-                'Your request has been submitted. Thank you for making the internet a safer place!';
+        }).then(function (response) {
+          if (response.ok) {
+            document.getElementById('hcc-form').classList.add('hcc-hidden');
+            const button = document.getElementById('hcc-report-btn');
+            const message = document.getElementById('hcc-message');
+            message.style.color = 'lime';
+            button.innerHTML = 'Report Another';
+            message.innerHTML =
+              'Your request has been submitted. Thank you for making the internet a safer place!';
+            console.log('found match');
+          } else {
+            document
+              .getElementById('inp')
+              .classList.add('hcc-form-input-wrong');
+            const message = document.getElementById('hcc-message');
+            message.style.color = 'red';
+            message.innerHTML =
+              'We could not find this expression on the page. Please try again.';
 
-              console.log('found match');
-            } else {
-              document
-                .getElementById('inp')
-                .classList.add('hcc-form-input-wrong');
-              const message = document.getElementById('hcc-message');
-              message.style.color = 'red';
-              message.innerHTML =
-                'We could not find this expression on the page. Please try again.';
-
-              console.log('fail');
-            }
-          })
-          .catch(function (reason) {
-            console.log('reason', reason);
-          });
+            console.log('fail');
+          }
+        }).catch(function (reason) {
+          console.log('reason', reason);
+        });
+      } else {
+        document.getElementById('hcc-form').classList.add('hcc-hidden');
+        document.getElementById('hcc-provide-good').classList.remove('hcc-hidden');
       }
     }
   );

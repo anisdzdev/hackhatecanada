@@ -211,6 +211,12 @@
 .orange {
   color: #e74c3c;
 }
+.green {
+  color: #47e73c;
+}
+.red {
+  color: #ec1400;
+}
 
 .inp {
   position: relative;
