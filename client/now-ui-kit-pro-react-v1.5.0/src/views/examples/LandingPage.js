@@ -72,7 +72,7 @@ function LandingPage() {
                 </h4>
               </Col>
             </Row>
-              <Form>
+              <Form onSubmit={addHateExpression.bind(this)}>
             <Row style={{justifyContent: "center"}}>
                 <Input
                   placeholder="Type your hate speech here..."
@@ -169,6 +169,28 @@ function LandingPage() {
       </div>
     </>
   );
+}
+
+function addHateExpression(e) {
+  e.preventDefault();
+  
+  fetch('http://localhost:5000/ai/add_expression', {
+    method: "POST",
+    body: JSON.stringify(this.state),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  }).then(
+    (response) => (response.json())
+  ).then((response) => {
+    if (response.status === 'success') {
+      console.log(response + "was sent!")
+      this.resetForm()
+    } else if (response.status === 'fail') {
+      console.log("Message failed to send.")
+    }
+  })
 }
 
 export default LandingPage;
