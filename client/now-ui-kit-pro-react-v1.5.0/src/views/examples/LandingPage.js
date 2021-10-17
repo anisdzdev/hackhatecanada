@@ -67,7 +67,7 @@ function LandingPage() {
               <Col className="ml-auto mr-auto text-center" md="8">
                 <h2 className="title">Who are we?</h2>
                 <h5 className="description">
-                  We are 5 Software Engineering that are looking to deepen their hard skills by developing an application that will help to fight for a good cause. Our team being mostly composed of visible minorities, we have had our fair share of hate speech. Fortunately, we possess tech-based skills that allow us to fight back and create solutions that prevent hate speech.
+                  We are 5 Software Engineering students that are looking to deepen their hard skills by developing an application that will help to fight for a good cause. Our team being mostly composed of visible minorities, we have had our fair share of hate speech. Fortunately, we possess tech-based skills that allow us to fight back and create solutions that prevent hate speech.
                 </h5>
               </Col>
             </Row>
@@ -110,7 +110,7 @@ function LandingPage() {
                   <Row style={{justifyContent: "center"}}>
                     <Button
                         block
-                        className="btn-round"
+                        className="btn-round bg-warning"
                         style={{width: "20%", margin: '30px 1px'}}
                         onClick={(e) => {
                           onSubmit(e);
