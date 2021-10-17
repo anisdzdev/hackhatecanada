@@ -38,8 +38,23 @@ function postExpression() {
           .then(function (response) {
             if (response.ok) {
               document.getElementById('hcc-form').classList.add('hcc-hidden');
+              const button = document.getElementById('hcc-report-btn');
+              const message = document.getElementById('hcc-message');
+              button.innerHTML = 'Report Another';
+              message.innerHTML =
+                'Your request has been submitted. Thank you for making the internet a safer place!';
+
               console.log('found match');
             } else {
+              document
+                .getElementById('inp')
+                .classList.add('hcc-form-input-wrong');
+              const message = document.getElementById('hcc-message');
+              message.classList.remove('orange');
+              message.classList.add('hcc-wrong-input-message');
+              message.innerHTML =
+                'We could not find this expression on the page. Please try again.';
+
               console.log('fail');
             }
           })
