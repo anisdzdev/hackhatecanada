@@ -3,34 +3,9 @@ const schemes = require('../models/mongoose');
 const { performance } = require('perf_hooks');
 const config = require('../../../config');
 const path = require('path')
-const fs = require('fs')
 
-const dataset = readHateSpeechTextFile(path.resolve('./', 'hate_speech.txt'));
-
-function readHateSpeechTextFile(file) {
-  const separator = /,/g;
-  const fileContent = fs.readFileSync(file, 'utf-8');
-  const matchIndexes = [];
-
-  let match;
-  while ((match = separator.exec(fileContent)) != null) {
-    matchIndexes.push(match.index);
-  }
-
-  const allHateWords = [];
-  let lastIndex = 0;
-
-  for (let i = 0; i < matchIndexes.length; i++) {
-    if (i === 0) {
-      allHateWords.push((fileContent.substring(lastIndex, matchIndexes[i])).toLowerCase());
-    }
-    else {
-      allHateWords.push((fileContent.substring(lastIndex + 1, matchIndexes[i])).toLowerCase());
-    }
-    lastIndex = matchIndexes[i];
-  }
-  return allHateWords;
-}
+const dataset = helper.readHateSpeechTextFile(path.resolve('./', 'hate_speech.txt'));
+const pending_user_expressions = []
 
 let bulkContainer;
 let bulkUrls = {}
@@ -166,7 +141,24 @@ module.exports.report = async (req, res) => {
 };
 
 module.exports.add_expression = async (req, res) => {
-  res.send("Works !")
+  let expression = req.body.expression
+  if (expression == null || expression.trim().match(/\b(\w+)\b/g).length < 2) {
+    return res.status(400).send("please provide a valid expression with at least two words")
+  }
+  expression = expression.trim().match(/\b(\w+)\b/g).join(" ");
+  if (dataset.includes(expression))
+    return res.status(200).send("expression is already in the list")
+  if(!pending_user_expressions[expression]){
+    pending_user_expressions[expression] = 1
+  } else {
+    pending_user_expressions[expression]++;
+  }
+
+  if (pending_user_expressions[expression] > 4) {
+    dataset.push(expression)
+  }
+  console.log(pending_user_expressions)
+  res.status(200).send("Added")
 }
 
 module.exports.reset = async (res) => {

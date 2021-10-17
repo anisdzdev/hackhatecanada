@@ -22,7 +22,7 @@ function LandingPageHeader() {
   });
   return (
     <>
-      <div className="page-header page-header-small">
+      <div className="page-header page-header-small" style={{height: '80vh'}}>
         <div
           className="page-header-image"
           style={{
@@ -35,30 +35,7 @@ function LandingPageHeader() {
           <Container>
             <h1 className="title">Hate Speech Scanner</h1>
             <div className="text-center">
-              {/*<Button
-                className="btn-icon btn-round mr-1"
-                color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                 <i className="fab fa-facebook-square"></i>
-              </Button>
-              <Button
-                className="btn-icon btn-round mr-1"
-                color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <i className="fab fa-twitter"></i>
-              </Button>
-              <Button
-                className="btn-icon btn-round"
-                color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <i className="fab fa-google-plus"></i>
-              </Button> */}
+              <h3>The Google Chrome Extension that makes you aware of hate speech on the internet</h3>
             </div>
           </Container>
         </div>

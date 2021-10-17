@@ -26,16 +26,24 @@ import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import FooterDefault from "components/Footers/FooterDefault.js";
 
 function LandingPage() {
-  const [pills, setPills] = React.useState("1");
+  const [success, setSuccess] = React.useState(false);
+  const [error, setError] = React.useState(null);
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
   const [expression, setExpression] = React.useState("");
   const onSubmit = (e) => {
     e.preventDefault();
 
-    addHateExpression(expression);
-    // const formData = new FormData();
-    // formData.append("expression", expression);
+    addHateExpression(expression).then((value) => {
+      setSuccess(true)
+      console.log(value)
+    }, (error) => {
+      console.log(error.response.data)
+      if(error.response.data)
+        setError(error.response.data)
+      else
+        setError('Something went wrong')
+    });
   }
 
   React.useEffect(() => {
@@ -82,38 +90,53 @@ function LandingPage() {
                 </h4>
               </Col>
             </Row>
-              <Form>
-            <Row style={{justifyContent: "center"}}>
-                <Input
-                  placeholder="Type your hate speech here..."
-                  type="text"
-                  style={{backgroundColor: "white", padding: "15px", fontSize: "1.25em", width: "50%"}}
-                  onChange={(e) => setExpression(e.target.value)}
-                  onFocus={() => setFirstFocus(true)}
-                  onBlur={() => setFirstFocus(false)}
-                ></Input>
-            </Row>
-              <Row style={{ justifyContent: "center" }}>
-                <Button
-                  block
-                  className="btn-round"
-                  style={{ width: "20%", margin: '30px 1px'}}
-                  onClick={(e) => {onSubmit(e);}}
-                  color="info"
-                  type="submit"
-                  size="lg">
-                  Send
-                </Button>
-              </Row>
-            </Form>
+            {(!success) ?
+                <Form>
+                  <Row style={{justifyContent: "center"}}>
+                    <Input
+                        placeholder="What do you consider offensive..."
+                        type="text"
+                        style={{backgroundColor: "white", padding: "15px", fontSize: "1.25em", width: "50%"}}
+                        onChange={(e) => setExpression(e.target.value)}
+                        onFocus={() => setFirstFocus(true)}
+                        onBlur={() => setFirstFocus(false)}
+                    ></Input>
+                  </Row>
+                  {(error) &&
+                    <Row style={{justifyContent: "center"}}>
+                    <span className="text-danger">{error}</span>
+                  </Row>
+                  }
+                  <Row style={{justifyContent: "center"}}>
+                    <Button
+                        block
+                        className="btn-round"
+                        style={{width: "20%", margin: '30px 1px'}}
+                        onClick={(e) => {
+                          onSubmit(e);
+                        }}
+                        color="info"
+                        type="submit"
+                        size="lg">
+                      Send
+                    </Button>
+                  </Row>
+                </Form>
+                :
+                <Row style={{justifyContent: "center"}}>
+                  <h4 className="description text-success">
+                    Thank you for your collaboration !
+                  </h4>
+                </Row>
+            }
 
           </Container>
         </div>
-        
+
         <div className="section section-contact-us text-center">
           <Container>
-            <h2 className="title">Want to work with us?</h2>
-            <p className="description">Your project is very important to us.</p>
+            <h2 className="title">Want to have access to our API?</h2>
+            <p className="description">We have plans for that. Feel free to contact us.</p>
             <Row>
               <Col className="text-center ml-auto mr-auto" lg="6" md="8">
                 <InputGroup
@@ -182,24 +205,7 @@ function LandingPage() {
 }
 
 function addHateExpression(expression) {
-  return axios.post("http://localhost:5000/ai/add_expression", expression);
-  // fetch('http://localhost:5000/ai/add_expression', {
-  //   method: "POST",
-  //   body: JSON.stringify(this.state.formData),
-  //   headers: {
-  //     'Accept': 'application/json',
-  //     'Content-Type': 'application/json'
-  //   },
-  // }).then(
-  //   (response) => (response.json())
-  // ).then((response) => {
-  //   if (response.status === 'success') {
-  //     console.log(response + "was sent!")
-  //     this.resetForm()
-  //   } else if (response.status === 'fail') {
-  //     console.log("Message failed to send.")
-  //   }
-  // })
+  return axios.post("http://localhost:5000/ai/add_expression", {expression});
 }
 
 export default LandingPage;
