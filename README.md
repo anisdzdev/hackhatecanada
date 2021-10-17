@@ -1,4 +1,4 @@
-# Project Title
+# HackHate submission project
 
 An application meant to educate, warn and hopefully stop the propagation of hate on the internet. It makes use of a web crawler to analyze as many websites as possible and identify if they are hateful or not using our own homebrew algorithm. There is also a Google Chrome extension that the users can install to get warned before visiting a website identified as harmful. Users can also submit words they deem hateful to be added to our detection algorithm.
 
