@@ -28,6 +28,7 @@ import FooterDefault from "components/Footers/FooterDefault.js";
 function LandingPage() {
   const [success, setSuccess] = React.useState(false);
   const [error, setError] = React.useState(null);
+  const [stats, setStats] = React.useState({});
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
   const [expression, setExpression] = React.useState("");
@@ -46,10 +47,20 @@ function LandingPage() {
     });
   }
 
+  const requestStats = () => {
+
+    requestStatsFetch(expression).then((value) => {
+      setStats(value.data)
+    }, (error) => {
+      console.log(error.response?.data)  
+    });
+  }
+
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");
+    requestStats();
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
     return function cleanup() {
@@ -73,6 +84,29 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
+        <hr/>
+        <div>
+        <Container >
+          
+            <Row>
+              <Col  className="display-3" >
+              <p style={{color:'red'}}>{stats.totalCrawledWebsites}</p>
+              </Col>
+              <Col style={{fontSize:"200%", marginTop:"30px"}}>
+              <p>websites were analysed</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col className="display-3">
+                <p style={{color:'red'}}>{stats.totalHarmfulWebsites}</p>
+              </Col>
+              <Col style={{fontSize:"200%"}}>
+              <p>contain content that might be considered offensive</p>
+              </Col>
+          </Row>
+        </Container>
+        </div>
+        <hr/>
         <div
           className="testimonials-1 section-image"
           style={{
@@ -86,7 +120,6 @@ function LandingPage() {
                 <h2 className="title">Want to help us on our fight against hate speech?</h2>
                 <h4 className="description text-white">
                   You can suggest some hate terms that you find offensive. That would help us a lot!
-                  {/* Even with our vast database of hate speech terms, your help could contribute to stop the spread of hate speech online! */}
                 </h4>
               </Col>
             </Row>
@@ -206,6 +239,9 @@ function LandingPage() {
 
 function addHateExpression(expression) {
   return axios.post("http://localhost:5000/ai/add_expression", {expression});
+}
+function requestStatsFetch() { 
+  return axios.get("http://localhost:5000/ai/stats")
 }
 
 export default LandingPage;
