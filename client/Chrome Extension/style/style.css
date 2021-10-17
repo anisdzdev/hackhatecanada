@@ -169,6 +169,9 @@
   color: #fff;
 }
 
+.hcc-form-input-wrong {
+  border: 2px solid red;
+}
 .hcc-hidden {
   display: none;
 }

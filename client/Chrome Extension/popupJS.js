@@ -68,4 +68,3 @@ function postExpression() {
 
 document.getElementById('hcc-report-btn').onclick = showForm;
 document.getElementById('hcc-send-btn').onclick = postExpression;
-document.getElementById('hcc-form').classList.add('hcc-hidden');
