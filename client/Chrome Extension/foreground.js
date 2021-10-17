@@ -1,12 +1,18 @@
 const body = document.body;
 
-show_popup(body)
+show_popup(body);
 
 document.getElementById('hcc-close-btn').addEventListener('click', () => {
-    if(popup)
-        popup.parentNode.removeChild(popup);
-})
+  if (popup) popup.parentNode.removeChild(popup);
+});
 
+// chrome.tabs.onRequest.addListener(function (request, sender, sendResponse) {
+//   console.log('outisde if');
+//   if (request.method == 'getText') {
+//     console.log('inside if');
+//     sendResponse({ data: document.innerText, method: 'getText' }); //same as innerText
+//   }
+// });
 
 // toggleButton.addEventListener('click', () => {
 //   toggle();
