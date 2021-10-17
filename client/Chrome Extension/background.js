@@ -27,7 +27,7 @@ const onRequestResult = (result) => {
 };
 
 const checkWebsiteStatus = () => {
-  if (fetch_result && JSON.parse(fetch_result).is_harmful) {
+  if (fetch_result && JSON.parse(fetch_result).link.is_harmful) {
     chrome.tabs.insertCSS(null, { file: './style/style.css' });
     chrome.tabs.executeScript(null, { file: './library/modernizr.custom.js' });
     chrome.tabs.executeScript(null, { file: './library/classie.js' });

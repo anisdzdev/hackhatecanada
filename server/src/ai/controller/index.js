@@ -3,6 +3,7 @@ const schemes = require('../models/mongoose');
 const { performance } = require('perf_hooks');
 const config = require('../../../config');
 const path = require('path')
+const {analyse} = require("./index");
 
 const dataset = helper.readHateSpeechTextFile(path.resolve('./', 'hate_speech.txt'));
 const pending_user_expressions = []
@@ -14,14 +15,15 @@ module.exports.check = async (req, res) => {
   let link = await schemes.Link.findOne({ url: req.query.url })
   if (link == null) {
     //send request to start new crawling job
-    return res.status(404).send();
+    analyse(req, res);
+    //return res.status(404).send();
   }
-  res.status(200).json(link);
+  res.status(200).json({link});
 }
 
 module.exports.analyse = async (req, res) => {
   if(Object.keys(bulkUrls).includes(req.body.url))
-    return res.status(200).send({ message: 'Page was already in database', link })
+    return res.status(200).send({ message: 'Page was already in database', link: bulkUrls[req.body.url] })
 
   let link = await schemes.Link.findOne({ url: req.body.url })
   if (link != null)
@@ -70,7 +72,7 @@ module.exports.analyse = async (req, res) => {
     }
 
     const endTime = performance.now()
-    res.status(201).json({ time_taken: endTime - startTime, is_harmful: true, url: req.body.url });
+    res.status(201).json({ time_taken: endTime - startTime, is_harmful: true, url: req.body.url, link });
   } else {
     link = schemes.Link({
       url: req.body.url,
@@ -102,7 +104,7 @@ module.exports.analyse = async (req, res) => {
       bulkUrls[req.body.url] = link;
     }
     const endTime = performance.now()
-    res.status(200).json({ time_taken: endTime - startTime, is_harmful: false, url: req.body.url });
+    res.status(200).json({ time_taken: endTime - startTime, is_harmful: false, url: req.body.url, link });
   }
 };
 
